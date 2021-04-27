@@ -20,6 +20,7 @@ function printPhonetic(string) {
     		phoneticString += phonetics[parseInt(num[i])]
     	}
     	rl.output.write(phoneticString);
+		inputArgs.indexOf(num) == inputArgs.length -1 ? rl.write("\n") : rl.write(",");
     })
 
 }
