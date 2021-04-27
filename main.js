@@ -7,5 +7,19 @@ const rl = readline.createInterface({
 
 var inputArgs = process.argv.slice(2);
 
-console.log(inputArgs);
+printPhonetic(inputArgs);
 rl.close();
+
+
+function printPhonetic(string) {
+	const phonetics = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+
+    string.map((num) => {
+    	var phoneticString = '';
+    	for (i = 0; i < num.length; i++) {
+    		phoneticString += phonetics[parseInt(num[i])]
+    	}
+    	rl.output.write(phoneticString);
+    })
+
+}
